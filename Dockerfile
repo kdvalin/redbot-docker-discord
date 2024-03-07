@@ -1,7 +1,7 @@
-FROM registry.access.redhat.com/ubi8:8.8-1009
+FROM registry.access.redhat.com/ubi9/ubi-init
 
 RUN dnf -y update
-RUN dnf -y install python39 python39-devel java-11-openjdk-headless nano git
+RUN dnf -y install python3-pip java-11-openjdk-headless nano git
 
 RUN alternatives --set java "java-11-openjdk.$(uname -i)"
 
